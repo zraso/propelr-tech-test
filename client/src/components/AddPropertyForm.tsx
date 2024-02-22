@@ -28,7 +28,7 @@ const AddPropertyForm: React.FC = () => {
     const requestData = {
       address: formData.address,
       photo: formData.photo,
-      price: parseInt(formData.price) // Convert price to a number
+      price: parseInt(formData.price)
     };
   
     axios.post('http://localhost:3000/api/properties', requestData)

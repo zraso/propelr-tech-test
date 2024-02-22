@@ -10,6 +10,8 @@ A simple full-stack web application that allows a user to view properties from a
 # How to run
 
 ```
+npm install
+
 cd server
 npm install
 npm run dev
@@ -17,9 +19,14 @@ npm run dev
 cd ../client
 npm install
 npm start
+Y
 ```
 
 Then visit `http://localhost:3001/api/properties`.
+
+# Key decisions
+* I used an MVC pattern for the backend which isn't always the most common practice with Node.JS, but I think is a really useful approach especially for a CRUD application like this.
+* I decided to leave the application with the manual refresh to display properties after a property has been added. The alternative was to implement a solution using WebSocket, which I thought was too complex for the purposes of this test.
 
 # If I had more time...
 

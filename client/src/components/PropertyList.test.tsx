@@ -7,13 +7,13 @@ import PropertyList from './PropertyList';
 const axiosMock = new MockAdapter(axios);
 
 const initialProperties = [
-  { id: 1, address: '123 Main St', photo: 'example1.jpg', price: 100000 },
-  { id: 2, address: '456 Elm St', photo: 'example2.jpg', price: 150000 }
+  { id: 1, address: '123 High Road', photo: 'example1.jpg', price: 100000 },
+  { id: 2, address: '46 Station Road', photo: 'example2.jpg', price: 150000 }
 ];
 
 const updatedProperties = [
   ...initialProperties,
-  { id: 3, address: '789 Oak St', photo: 'example3.jpg', price: 200000 }
+  { id: 3, address: '23 Junction Road', photo: 'example3.jpg', price: 200000 }
 ];
 
 describe('PropertyList Component', () => {

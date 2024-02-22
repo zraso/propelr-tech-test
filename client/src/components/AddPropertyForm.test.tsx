@@ -22,19 +22,18 @@ describe('AddPropertyForm Component', () => {
     const photoInput = screen.getByLabelText('Photo:');
     const priceInput = screen.getByLabelText('Price:');
   
-    fireEvent.change(addressInput, { target: { value: '123 Main St' } });
+    fireEvent.change(addressInput, { target: { value: '123 High Road' } });
     fireEvent.change(photoInput, { target: { value: 'example.jpg' } });
     fireEvent.change(priceInput, { target: { value: '100000' } });
   
-    expect(addressInput).toHaveValue('123 Main St');
+    expect(addressInput).toHaveValue('123 High Road');
     expect(photoInput).toHaveValue('example.jpg');
-    // Convert the received value to a string before making the assertion
     expect(String((priceInput as HTMLInputElement).value)).toEqual('100000')
   });
 
   test('submits form data and adds property on form submission', async () => {
     const mockFormData = {
-      address: '123 Main St',
+      address: '123 High Road',
       photo: 'example.jpg',
       price: 100000
     };
